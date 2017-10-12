@@ -1,0 +1,48 @@
+html { 
+  background: url(img/sky.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.wrapper {
+  text-align: center;
+  position:relative;
+  width: 450px;
+  min-height: 250px;
+  margin: 10% auto auto auto;
+  padding: 20px;
+  background-color: rgba(174, 186, 226, 0.7);
+  border-radius: 40px;
+  box-shadow: 0 0 10pt 10pt #1C337C;
+  color: #1C337C;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px; 
+  border-radius: 10px; 
+  background-color: rgba(250, 250, 250, 0.7); 
+  box-shadow: 0 0 3pt 2pt #1C337C;
+}
+
+button:focus {
+  outline: none;
+  
+}
+
+#weather-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px; 
+  font-size: 24px;
+  /* text-shadow: 0 0 10px #fff; */
+  border-radius: 10px
+}
+
+#weather-info div {  
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;  
+  background-color: rgba(250, 250, 250, 0.7); 
+  box-shadow: 0 0 3pt 2pt #1C337C;
+}
