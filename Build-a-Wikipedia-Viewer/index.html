@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">  
+  <link rel="stylesheet" href="main.css">
+  <title>Wiki Search</title>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Wikipedia API Search</h1>
+    <div id='randomLink'>
+      <a href=https://en.wikipedia.org/wiki/Special:Random target="blank">
+        <img alt="Random Wiki Page" title="Random Wiki Page" src='https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png'>
+      </a>
+    </div>
+    <div class='searchContainer'>
+      <input class='fromWiki' id='searchTerm'>
+      <button id='wikiSearch' type='button'>find on Wiki</button>
+    </div>
+    <ul id='infoFromWiki'>
+    </ul>    
+  </div>
+</body>
+
+</html>
