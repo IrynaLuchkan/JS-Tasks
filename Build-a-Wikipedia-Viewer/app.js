@@ -1,10 +1,10 @@
 window.onload = function () {
 
-    document.getElementById('wikiSearch').addEventListener("click", runSearch);
-    var infoFromWiki=document.getElementById("infoFromWiki");
+    document.getElementById('wiki-search').addEventListener("click", runSearch);
+    var infoFromWiki=document.getElementById("info-from-wiki");
 
     function runSearch() {
-        var searchTerm = document.getElementById('searchTerm').value;
+        var searchTerm = document.getElementById('search-term').value;
 
         var searchUrl="https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm + "&format=json";
 
@@ -21,8 +21,7 @@ window.onload = function () {
              "postman-token": "dc9d5055-ce4c-50df-50a3-1de2b260ea34"
             },
         })
-        .then(response => {
-            console.log('first point');
+        .then(response => {            
             var contentType = response.headers.get("content-type");
             if(contentType && contentType.indexOf("application/json") !== -1) {                      
                return response.json()
@@ -30,10 +29,8 @@ window.onload = function () {
                throw new TypeError()
            }
         })
-        .then (wikiInfo => {            
-            console.log(wikiInfo)
-            var i, amount=wikiInfo[1].length;
-            console.log(amount);
+        .then (wikiInfo => {
+            var i, amount=wikiInfo[1].length;            
             infoFromWiki.innerHTML='';
             for (i=0; i<amount; i++) {
                 infoFromWiki.innerHTML+=`<li><a href=${wikiInfo[3][i]}>${wikiInfo[1][i]}</a><br>${wikiInfo[2][i]}</li>`;
